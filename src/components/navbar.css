@@ -1,0 +1,24 @@
+nav .header .enter {
+    padding: .5rem;
+    width: 7.5rem;
+    transition: border 0.2s ease;
+}
+
+nav .header .enter:hover {
+    border: 3px solid white;
+}
+nav .header button {
+    transition: font-size 0.3s ease;
+}
+
+nav .header button:hover {
+    font-size: 20px;
+    color: #3C41ff;
+}
+nav .navbar .menu ul li {
+    transition: text-shadow 0.3s ease;
+}
+nav .navbar .menu ul li:hover {
+    text-shadow: 2px 3px 3px #777777;
+    color: #3C41ff;
+}

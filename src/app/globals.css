@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(../components/navbar.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;500;700&display=swap');
 
 :root {
@@ -18,17 +19,17 @@ body {
 .width-max {
   width: 100%;
   max-width: 120rem;
-  padding: 0 4rem;
+  padding: 0 6rem;
   margin: 0 auto;
 }
 
 .title-pm {
-  font-size: 30px;
+  font-size: 2rem;
   color: var(--white);
   font-weight: 600;
 } 
 
 .anco {
-  font-size: 20px;
+  font-size: 18px;
   color: var(--dark-blue);
 }
