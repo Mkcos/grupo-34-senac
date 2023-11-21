@@ -32,7 +32,6 @@ const getCategoryData = async (name) => {
 export default async function Category({ params: { name } }) {
 	const courses = await getCourses(name);
 	const categoryData = await getCategoryData(name);
-	console.log(courses);
 
 	return (
 		<div className={`${styles.container} width-max`}>
@@ -43,7 +42,7 @@ export default async function Category({ params: { name } }) {
 
 			<ul>
 				{courses.map((course) => (
-					<li>
+					<li key={course.id}>
 						<Link href={`/curso/${course.name}`}>{course.slug}</Link>
 					</li>
 				))}
