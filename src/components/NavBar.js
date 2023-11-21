@@ -24,7 +24,7 @@ export default function NavBar () {
             <div className=" navbar mt-20">
                 <div className=" menu py-4 bg-white rounded-full">
                     <ul className="flex justify-around anco font-bold">
-                        <li><Link href=''>Inovação e Gestão</Link></li>
+                        <li><Link href='/categoria/inovation'>Inovação e Gestão</Link></li>
                         <li><Link href=''>Progamação</Link></li>
                         <li><Link href=''>FrontEnd</Link></li>
                         <li><Link href=''>BackEnd</Link></li>

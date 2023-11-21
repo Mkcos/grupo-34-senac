@@ -1,0 +1,89 @@
+{
+	"courses": [
+		{
+			"id": 1,
+			"slug": "Métodos Ágeis",
+			"name": "metodologia-agil",
+			"category": "inovation",
+			"modules": [
+				{
+					"id": 1,
+					"title": "Introdução - Boas Vindas",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 2,
+					"title": "O que é Agilidade?"
+				},
+				{
+					"id": 3,
+					"title": "Métodos Ágeis mais usados",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 4,
+					"title": "Scrum",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 5,
+					"title": "XP",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 6,
+					"title": "Kanban, é Método Ágil?",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 7,
+					"title": "Atividade",
+					"description": "Avaliação do Curso"
+				}
+			]
+		},
+		{
+			"id": 1,
+			"slug": "Gestão Ágil",
+			"name": "gestao-agil",
+			"category": "inovation",
+			"modules": [
+				{
+					"id": 1,
+					"title": "Introdução - Boas Vindas",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 2,
+					"title": "O que é Agilidade?"
+				}
+			]
+		},
+    {
+			"id": 1,
+			"slug": "Transformação Ágil",
+			"name": "transformacao-agil",
+			"category": "inovation",
+			"modules": [
+				{
+					"id": 1,
+					"title": "Introdução - Boas Vindas",
+					"description": "Introdução ao curso Práticas Ágeis"
+				},
+				{
+					"id": 2,
+					"title": "O que é Agilidade?"
+				}
+			]
+		}
+	],
+
+	"categories": [
+		{
+			"id": 1,
+			"name": "inovation",
+			"slug": "Inovação e Gestão",
+			"description": "Prepara os alunos para liderar e gerenciar equipes, projetos e organizações com eficácia, ao mesmo tempo em que os capacita a promover a inovação contínua."
+		}
+	]
+}
