@@ -1,6 +1,10 @@
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+
 export default function Home() {
 	return (
 		<>
+			<NavBar />
 			<main className=" relative h-[70vh]">
 				<div className="content absolute top-1/2 left-1/4 m-auto">
 					<h1 className="content__title cursor__animation title-pm">
@@ -8,6 +12,7 @@ export default function Home() {
 					</h1>
 				</div>
 			</main>
+			<Footer />
 		</>
 	);
 }

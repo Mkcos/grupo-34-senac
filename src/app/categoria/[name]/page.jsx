@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import NavBar from "../../../components/NavBar";
+import Footer from "../../../components/Footer";
 
 const getCourses = async (category) => {
 	try {
@@ -35,6 +37,7 @@ export default async function Category({ params: { name } }) {
 
 	return (
 		<div className={`${styles.container} width-max`}>
+			<NavBar />
 			<h1>{categoryData[0].slug}</h1>
 			<p>{categoryData[0].description}</p>
 
@@ -47,6 +50,8 @@ export default async function Category({ params: { name } }) {
 					</li>
 				))}
 			</ul>
+
+			<Footer />
 		</div>
 	);
 }
