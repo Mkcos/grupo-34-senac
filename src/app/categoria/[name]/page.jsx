@@ -1,7 +1,12 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
+<<<<<<< HEAD
 import {WbIncandescentOutlined, ArrowBackIos} from "@mui/icons-material";
 
+=======
+import NavBar from "../../../components/NavBar";
+import Footer from "../../../components/Footer";
+>>>>>>> 8f461a7d9f00ccfac33d543862ba36b4b9a23079
 
 const getCourses = async (category) => {
 	try {
@@ -37,6 +42,12 @@ export default async function Category({ params: { name } }) {
 
 	return (
 		<div className={`${styles.container} width-max`}>
+<<<<<<< HEAD
+=======
+			<NavBar />
+			<h1>{categoryData[0].slug}</h1>
+			<p>{categoryData[0].description}</p>
+>>>>>>> 8f461a7d9f00ccfac33d543862ba36b4b9a23079
 
 			<div className="flex items-center gap-2 mb-4">
 			< WbIncandescentOutlined className="rotate-180 w-20 h-20"/>
@@ -47,6 +58,7 @@ export default async function Category({ params: { name } }) {
 			</div>
 			<h2 className="font-bold mb-4">Escolha seu curso</h2>
 
+<<<<<<< HEAD
 			<div className="mb-52">
 				<ul>
 					{courses.map((course) => (
@@ -57,6 +69,17 @@ export default async function Category({ params: { name } }) {
 					))}
 				</ul>
 			</div>
+=======
+			<ul>
+				{courses.map((course) => (
+					<li key={course.id}>
+						<Link href={`/curso/${course.name}`}>{course.slug}</Link>
+					</li>
+				))}
+			</ul>
+
+			<Footer />
+>>>>>>> 8f461a7d9f00ccfac33d543862ba36b4b9a23079
 		</div>
 	);
 }

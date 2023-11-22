@@ -20,8 +20,7 @@ export default async function Category({ params: { name } }) {
 
 	return (
 		<div>
-			<h1>Curso - {data[0].slug}</h1>
-			<CourseContent modules={data[0].modules} />
+			<CourseContent data={data[0]} />
 		</div>
 	);
 }

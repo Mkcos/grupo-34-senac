@@ -13,27 +13,24 @@
 				},
 				{
 					"id": 2,
-					"title": "O que é Agilidade?"
+					"title": "O que é Agilidade?",
+					"description": "Entenda oque é agilidade e como ela pode te ajudar no seu dia a dia"
 				},
 				{
 					"id": 3,
 					"title": "Métodos Ágeis mais usados",
-					"description": "Introdução ao curso Práticas Ágeis"
+					"description": "Descubra quais são os métodos agéis mais utilizados e quais suas vantagens"
 				},
 				{
 					"id": 4,
 					"title": "Scrum",
-					"description": "Introdução ao curso Práticas Ágeis"
-				},
-				{
-					"id": 5,
-					"title": "XP",
-					"description": "Introdução ao curso Práticas Ágeis"
+
+					"description": "Entendendo o SCRUM mais a fundo."
 				},
 				{
 					"id": 6,
 					"title": "Kanban, é Método Ágil?",
-					"description": "Introdução ao curso Práticas Ágeis"
+					"description": "Afinal, kanban é ou não um método agil?"
 				},
 				{
 					"id": 7,
@@ -59,7 +56,7 @@
 				}
 			]
 		},
-    {
+		{
 			"id": 2,
 			"slug": "Transformação Ágil",
 			"name": "transformacao-agil",
@@ -85,5 +82,7 @@
 			"slug": "Inovação e Gestão",
 			"description": "Prepara os alunos para liderar e gerenciar equipes, projetos e organizações com eficácia, ao mesmo tempo em que os capacita a promover a inovação contínua."
 		}
-	]
+	],
+
+	"user": {}
 }
