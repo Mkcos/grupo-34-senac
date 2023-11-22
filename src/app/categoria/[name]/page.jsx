@@ -1,5 +1,7 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import {WbIncandescentOutlined, ArrowBackIos} from "@mui/icons-material";
+
 
 const getCourses = async (category) => {
 	try {
@@ -35,18 +37,26 @@ export default async function Category({ params: { name } }) {
 
 	return (
 		<div className={`${styles.container} width-max`}>
-			<h1>{categoryData[0].slug}</h1>
-			<p>{categoryData[0].description}</p>
 
-			<h2>Escolha seu curso</h2>
+			<div className="flex items-center gap-2 mb-4">
+			< WbIncandescentOutlined className="rotate-180 w-20 h-20"/>
+			<h1 className="font-bold">{categoryData[0].slug}</h1>
+			</div>
+			<div className="mb-28 pl-20 text-2xl leading-8">
+				<p>{categoryData[0].description}</p>
+			</div>
+			<h2 className="font-bold mb-4">Escolha seu curso</h2>
 
-			<ul>
-				{courses.map((course) => (
-					<li key={course.id}>
-						<Link href={`/curso/${course.name}`}>{course.slug}</Link>
-					</li>
-				))}
-			</ul>
+			<div className="mb-52">
+				<ul>
+					{courses.map((course) => (
+						<li  className="border-2 mb-4 rounded-md py-2 px-4 flex justify-between" key={course.id}>
+							<Link href={`/curso/${course.name}`}>{course.slug}</Link>
+							<ArrowBackIos className="rotate-[-90deg]"/>
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 }
