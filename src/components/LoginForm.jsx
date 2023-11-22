@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
-import { useForm, useLocalStorage } from "react-hook-form";
+import React from "react";
+import { useForm } from "react-hook-form";
 import * as yup from "yup";
+import { useSearchParams, useRouter } from "next/navigation";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -17,6 +18,9 @@ export const LoginForm = () => {
 		}),
 	});
 
+	const returnUrl = useSearchParams().get("return_url");
+	const router = useRouter();
+
 	const onSubmit = (values) => {
 		const user = JSON.parse(localStorage.getItem("user"));
 
@@ -25,7 +29,12 @@ export const LoginForm = () => {
 			user.email === values.email &&
 			user.password === values.password
 		) {
-			// Faça alguma coisa com as credenciais válidas
+			localStorage.setItem("isAuthenticated", true);
+			if (returnUrl) {
+				router.push(returnUrl);
+			} else {
+				router.push("/");
+			}
 		} else {
 			toast.error("Revise os dados e tente novamente");
 		}
@@ -95,7 +104,12 @@ export const LoginForm = () => {
 					ENTRAR
 				</button>
 
-        <Link href="/auth/register" style={{marginBottom: "1.5rem", marginTop: "1rem"}}>Não tem uma conta? Cadastre-se</Link>
+				<Link
+					href="/auth/register"
+					style={{ marginBottom: "1.5rem", marginTop: "1rem" }}
+				>
+					Não tem uma conta? Cadastre-se
+				</Link>
 			</form>
 		</div>
 	);

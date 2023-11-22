@@ -6,12 +6,23 @@ export const CourseContent = ({ modules }) => {
 =======
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./CourseContent.module.scss";
+import { useRouter, usePathname } from "next/navigation";
 
 export const CourseContent = ({ data }) => {
 	const [currentModule, setCurrentModule] = useState(data.modules[0]);
 	const [isCompleted, setIsCompleted] = useState(false);
+	const router = useRouter();
+	const pathname = usePathname();
+
+	const isAuthenticated = localStorage.getItem("isAuthenticated");
+
+	useEffect(() => {
+		if (!isAuthenticated) {
+			router.push(`/auth/login?return_url=${pathname}`);
+		}
+	}, []);
 
 	return (
 		<div
