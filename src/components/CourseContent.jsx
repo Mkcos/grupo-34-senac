@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import styles from "./CourseContent.module.scss";
 
 export const CourseContent = ({ data }) => {
 	const [currentModule, setCurrentModule] = useState(data.modules[0]);
@@ -9,6 +10,7 @@ export const CourseContent = ({ data }) => {
 	return (
 		<div
 			style={{ display: "flex", justifyContent: "space-between", gap: "5rem" }}
+			className={styles.container}
 		>
 			<div
 				style={{
@@ -16,6 +18,7 @@ export const CourseContent = ({ data }) => {
 					height: "100vh",
 					backgroundColor: "#FFFFFFB2",
 				}}
+				className={styles.info}
 			>
 				<h1>Curso - {data.slug}</h1>
 				<ul>
@@ -27,29 +30,34 @@ export const CourseContent = ({ data }) => {
 									setIsCompleted(false);
 								}}
 							>
-								{item.title}
+								{`>`} {item.title}
 							</button>
 						</li>
 					))}
 				</ul>
 			</div>
 
-			<div style={{ flex: 1 }}>
+			<div
+				style={{ flex: 1 }}
+				className={styles.course}
+			>
 				<h2>TRENO CURSOS </h2>
-				<h3>Inovação e gestã0 - Curso {data.slug}</h3>
+				<h3>Inovação e gestão - Curso {data.slug}</h3>
 
 				<div
 					style={{
 						width: "800px",
-						height: "500px",
-						flex: 1,
+						height: "400px",
+						flexDirection: "column",
 						backgroundColor: "white",
 						display: "flex",
 						alignItems: "center",
 						justifyContent: "center",
 					}}
+					className={styles.class}
 				>
 					<p style={{ color: "black" }}>{currentModule.description}</p>
+					<h3>Treno Cursos</h3>
 				</div>
 
 				<div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
